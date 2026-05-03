@@ -1,48 +1,16 @@
-function myFunction(){
-    document.getElementById("buttonPlus").addEventListener("click", increaseCount);
-    document.getElementById("buttonMinus").addEventListener("click", decreaseCount);
-    document.getElementById("buttonReset").addEventListener("click", resetCount);
-    document.getElementById("buttonSave").addEventListener("click", saveCount);
-    document.getElementById("buttonLoad").addEventListener("click", loadCount);     
-    let count = 10;
-    loadCount();
+console.log("JS loaded");
+window.onload=function(){
 
-    function updateCount() {
-       
-        document.getElementById("counter").innerText = count;
-    }
-    updateCount();
+  const player1 = {name: "Messi"};
+  const player2 ={name: "Cristiano"};
+  const player3 ={name: "Neymar"}
 
-    function increaseCount() {
-        count++;
-        updateCount();
-    }
+  function Fifa(Wcup){
+    return Wcup + this.name;
+  }
 
-    function decreaseCount() {
-        if(count >1)
-        count--;
-        updateCount();
-    }       
-    function resetCount() {
-        count = 10;
-        updateCount();
-    }   
-    function saveCount() {
-        localStorage.setItem("count", count);
-    }   
-    function loadCount() {
-        const savedCount = localStorage.getItem("count");   
-        if (savedCount !== null) {
-            count = parseInt(savedCount, 10);
-            updateCount();
-        }   else {  
-            alert("No saved count found.");
-        }       
-    }
+  let message=Fifa.call(player1,"World cup Winner is : ");
 
-    window.increaseCount = increaseCount;
-    window.decreaseCount = decreaseCount;
-    window.resetCount = resetCount;
-    window.saveCount = saveCount;
-    window.loadCount = loadCount;       
+
+ document.getElementById("output").innerHTML=message;
 }
