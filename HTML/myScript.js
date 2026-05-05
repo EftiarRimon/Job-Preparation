@@ -1,16 +1,24 @@
+
+
 console.log("JS loaded");
 window.onload=function(){
 
-  const player1 = {name: "Messi"};
-  const player2 ={name: "Cristiano"};
-  const player3 ={name: "Neymar"}
+  const person={
+    firstName:"Abida Sultana",
+    lastName:"Juthy",
+    fullName: function(){
+      return this.firstName+" "+this.lastName;
 
-  function Fifa(Wcup){
-    return Wcup + this.name;
+    }
+  }
+ 
+  const person1={
+    firstName:"eftiare",
+    lastName:"rimon"
   }
 
-  let message=Fifa.call(player1,"World cup Winner is : ");
+  let fullName = person.fullName.bind(person);
 
+  document.getElementById("output").innerHTML=fullName();
 
- document.getElementById("output").innerHTML=message;
 }
