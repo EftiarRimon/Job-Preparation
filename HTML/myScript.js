@@ -3,22 +3,11 @@
 console.log("JS loaded");
 window.onload=function(){
 
-  const person={
-    firstName:"Abida Sultana",
-    lastName:"Juthy",
-    fullName: function(){
-      return this.firstName+" "+this.lastName;
+ function multiply(a, b){
+  return a * b;
+ }
 
-    }
-  }
- 
-  const person1={
-    firstName:"eftiare",
-    lastName:"rimon"
-  }
-
-  let fullName = person.fullName.bind(person);
-
-  document.getElementById("output").innerHTML=fullName();
+ const double = multiply.bind(null, 2);
+ document.getElementById("output").innerHTML=double(5);
 
 }
