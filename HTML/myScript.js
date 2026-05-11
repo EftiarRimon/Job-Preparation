@@ -3,11 +3,19 @@
 console.log("JS loaded");
 window.onload=function(){
 
- function multiply(a, b){
-  return a * b;
- }
+let count=0;
+function add(){
+ 
+  
+  count++;
+  return count;
+}
 
- const double = multiply.bind(null, 2);
- document.getElementById("output").innerHTML=double(5);
+add();
+add();
+add();
 
+
+
+document.getElementById("output").innerHTML=add();
 }
