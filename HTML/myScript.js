@@ -3,19 +3,15 @@
 console.log("JS loaded");
 window.onload=function(){
 
-let count=0;
-function add(){
- 
-  
-  count++;
-  return count;
-}
+  document.getElementById("output").innerHTML=add();
 
-add();
-add();
-add();
+  function myCounter(){
+    let counter=0;
+    
 
 
 
-document.getElementById("output").innerHTML=add();
+  }
+
+
 }
