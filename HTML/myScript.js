@@ -1,17 +1,23 @@
 
 
 console.log("JS loaded");
-window.onload=function(){
 
-  document.getElementById("output").innerHTML=add();
+
+
 
   function myCounter(){
     let counter=0;
+   
+      counter++;
+      return counter;
+    };
     
 
+  
+  const add =myCounter();
 
-
+  window.myFunction = function (){
+    document.getElementById("demo").innerHTML=add();
   }
 
 
-}
