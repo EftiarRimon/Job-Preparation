@@ -186,5 +186,8 @@ select * from customers
 limit 3
 
 select * from customers
-where not city='Dhaka'
+where  city='Dhaka' or city ='Comilla'
+
+select * from customers
+order by city
 
