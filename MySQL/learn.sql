@@ -191,3 +191,11 @@ where  city='Dhaka' or city ='Comilla'
 select * from customers
 order by city
 
+create table person(
+    ID int NOT NULL,
+    LAST_NAME varchar(255) NOT NULL,
+    FIRST_NAME varchar(255) NOT NULL,
+    AGE int NOT NULL,
+    primary key(ID)
+);
+
